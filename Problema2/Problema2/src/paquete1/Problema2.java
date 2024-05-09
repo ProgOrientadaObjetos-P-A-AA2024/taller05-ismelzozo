@@ -31,7 +31,7 @@ public class Problema2 {
 
             Automovil auto = new Automovil(cedulaDueño, marca, añoFabricacion, valorVehiculo);
             auto.calcularValorMatri();
-            System.out.println("Resultados de los automóviles ingresados:");
+            System.out.println("Resultados de los automóviles ingresados:\n");
             System.err.printf("%s\n", auto);
         }
     }

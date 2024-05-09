@@ -33,7 +33,7 @@ public class Problema1 {
                 e.toString();
                 System.err.printf("%s\n",e);
                 sc.nextLine();
-                System.out.println("Se ah creado el estudiante:");
+                System.out.println("Estudiante ingresado:");
             } else if (opcion == 2) {
                 System.out.println("Ingrese el nombre del estudiante:");
                 n = sc.nextLine();
@@ -48,7 +48,7 @@ public class Problema1 {
                 Entidad e = new Entidad(n, calificacion1, calificacion2, calificacion3);
                 e.toString();
                 System.err.printf("%s\n", e);
-                System.out.println("Se ah creado el estudiante...!");
+                System.out.println("Estudiante ingresado...!");
                 
             } else {
                 System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
