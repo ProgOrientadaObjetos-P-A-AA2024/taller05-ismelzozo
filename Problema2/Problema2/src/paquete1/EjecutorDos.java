@@ -3,31 +3,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package paquete1;
+
 import paquete2.Automovil;
 import java.util.Scanner;
 
 public class EjecutorDos {
-    Scanner sc = new Scanner(System.in);
 
-        do {
-            System.out.println("Ingrese la cédula del dueño del automóvil:");
-            String cedulaDueño = sc.next();
-            System.out.println("Ingrese la marca del automóvil:");
-            String marca = sc.next();
-            System.out.println("Ingrese el año de fabricación del automóvil:");
+    public static void main(String[] args) {
+        boolean bandera;
+        String opcion;
+        Scanner sc = new Scanner(System.in);
+        bandera = true;
+        while (bandera) {
+            System.out.println("Ingrese los datos del automovil:");
+            System.out.println("Cedula del Dueño: ");
+            String cedulaDueño = sc.nextLine();
+            System.out.println("Marca del Vehículo: ");
+            String marcaVehiculo = sc.nextLine();
+            System.out.println("Año de Fabricación: ");
             int añoFabricacion = sc.nextInt();
-            System.out.println("Ingrese el valor del vehículo:");
+            System.out.println("Valor del Vehículo: ");
             double valorVehiculo = sc.nextDouble();
-
-            Automovil auto = new Automovil(cedulaDueño, marca, añoFabricacion, valorVehiculo);
+            sc.nextLine();
+            Automovil auto = new Automovil(cedulaDueño, marcaVehiculo, añoFabricacion, valorVehiculo);
             auto.calcularValorMatri();
-
-            System.out.println("¿Desea ingresar otro automóvil? (s/n):");
-            auto = sc.next().charAt(0);
-        } while (auto == 's' || continuar == 'S');
-
-        System.out.println("Resultados de los automóviles ingresados:");
-        System.err.printf("%s\n", auto);
-
+           
+            System.out.println("¿Desea ingresar otro automovil presione enter para continuar o 'no' para salir? : ");
+            opcion = sc.nextLine();
+            if (opcion.equals("no")) {
+                bandera = false;
+            }
+            System.out.println("Resultados de los automóviles ingresados:\n");
+            System.err.printf("%s\n", auto);
+        }
     }
 }
